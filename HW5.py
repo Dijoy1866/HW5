@@ -32,12 +32,9 @@ if not 100<= number<=999:
     print('Ошибка, число не входит в диапазон')
     exit()
 
-n = 0
-
-while number > 0:
-    c = number % 10
-    number = number // 10
-    n = n * 10 + c
-
-print(f'reversed_number: ', n)
+first_num = number % 10
+second_num = number % 100 // 10
+third_num = number % 1000 // 100
+final_num = first_num * 100 + second_num * 10 + third_num
+print(final_num)
 
